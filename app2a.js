@@ -2,8 +2,6 @@ const miBody = document.querySelector("body");
 /////// Toma ancho y alto disponible
 let limiteX     = window.innerWidth;
 let limiteY     = window.innerHeight;
-console.log("X: "+limiteX+" ,Y: "+limiteY);
-miBody.style.maxWidth = limiteX;
 //
 const NO_IMAGE = "no_image.jpg";
 const APIS = [
@@ -11,6 +9,19 @@ const APIS = [
               "https://hp-api.onrender.com/api/character/", // trae por id del personaje
               "https://hp-api.onrender.com/api/characters/house/:house", // no usado:  trae todos los personajes de la casas
       ];
+
+function ajustaAnchoBody(){
+  console.log("X: "+limiteX+" ,Y: "+limiteY);
+  miBody.style.maxWidth = limiteX;
+} 
+
+// Detecta cambio de tamaño de pantalla 
+window.addEventListener("resize", function() {
+  limiteX     = window.innerWidth;
+  limiteY     = window.innerHeight;
+  ajustaAnchoBody();
+});
+
 
 async function muestraChar(info) {
   const myChar = document.querySelector(".my-char-cont");
@@ -95,6 +106,7 @@ function consumirAPIs() {
     obtenerInfoApi(APIS[0]);
 }
 
+ajustaAnchoBody();
 consumirAPIs(); 
 
 
