@@ -107,15 +107,5 @@ function consumirAPIs() {
 }
 
 ajustaAnchoBody();
-consumirAPIs(); 
 
-
-
-
-
-
-
-
-
-
-
+consumirAPIs();
