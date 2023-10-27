@@ -79,7 +79,9 @@ function consumirAPIs() {
   miBody.innerHTML = "";
     miBody.innerHTML +=`
         <div class="my-char-cont">
-          <h5 class="char-name"> Clickea sobre el personaje para ver todos los datos...</h5>
+          <h5 class="char-name">Personajes Harry Potter </h5>
+          <h6 class="char-name">'Click' sobre el personaje >>></h6>
+          <h6 class="char-name">  para ver todos los detalles...</h6>          
         </div>
         <div class="my-cards-cont">
         </div>
