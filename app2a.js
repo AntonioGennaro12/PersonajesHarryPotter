@@ -1,4 +1,10 @@
 const miBody = document.querySelector("body");
+/////// Toma ancho y alto disponible
+let limiteX     = window.innerWidth;
+let limiteY     = window.innerHeight;
+console.log("X: "+limiteX+" ,Y: "+limiteY);
+miBody.style.maxWidth = limiteX;
+//
 const NO_IMAGE = "no_image.jpg";
 const APIS = [
               "https://hp-api.onrender.com/api/characters", 
